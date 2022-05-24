@@ -18,7 +18,7 @@ public class EmailController {
 	@Autowired
 	private EmailService emailService;
 	
-	@PostMapping("/email")
+	@PostMapping("/emails")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Mono<String> sendEmail(@RequestBody Email email){
 		return emailService.sendEmail(email);

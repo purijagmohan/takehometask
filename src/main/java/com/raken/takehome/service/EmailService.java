@@ -35,7 +35,7 @@ public class EmailService {
 	private Environment env;
 
 	public EmailService(WebClient.Builder builder) {
-	    this.client = builder.baseUrl(env.getProperty("app.sendgridapi")).build();
+	    this.client = builder.baseUrl("https://api.sendgrid.com/v3/").build();
 	}
 	
 	// Use webclient for a non blocking asynchronous invocation of sendgrid rest api
